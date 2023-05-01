@@ -3,7 +3,7 @@ import './App.css';
 import {ethers} from 'ethers'
 import { useState } from 'react';
 import TokenArtifact from "./Token.json"
-const tokenAddress = "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0"
+const tokenAddress = "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707"
 
 
 function App() {
