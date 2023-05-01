@@ -3,7 +3,7 @@ import './App.css';
 import {ethers} from 'ethers'
 import { useState } from 'react';
 import TokenArtifact from "./Token.json"
-const tokenAddress = "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707"
+const tokenAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
 
 
 function App() {
@@ -52,7 +52,7 @@ async function getBalance() {
     console.log(signer)
     const contract = await _intializeContract(signer)
     const [account] = await window.ethereum.request({ method: 'eth_requestAccounts' })
-    const balance = await contract.balanceOf(account);
+    const balance = await contract.balanceOf("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
     console.log("Account Balance: ", balance.toString());
     setBalance(balance.toString())
   }

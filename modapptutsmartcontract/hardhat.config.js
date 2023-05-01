@@ -9,7 +9,7 @@ module.exports = {
   solidity: "0.7.0",
   networks: {
     hardhat: {
-      chainId: 1337
+      chainId: 31337
     },
     arbitrumGoerli: {
       url: "https://goerli-rollup.arbitrum.io/rpc",
