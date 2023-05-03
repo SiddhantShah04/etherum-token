@@ -20,8 +20,8 @@ async function main() {
 
   const lockedAmount = hre.ethers.utils.parseEther("0.001");
 
-  const Lock = await hre.ethers.getContractFactory("SimpleToken");
-  const token = await Lock.deploy("GARI","Gari",100000000000000);
+  const Lock = await hre.ethers.getContractFactory("ERC201Basic");
+  const token = await Lock.deploy();
 
   await token.deployed();
   console.log("Token address:", token.address);
