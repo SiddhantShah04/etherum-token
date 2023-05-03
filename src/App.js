@@ -3,8 +3,10 @@ import "./App.css";
 import { ethers } from "ethers";
 import { useState } from "react";
 import TokenArtifact from "./Token.json";
-const tokenAddress = "0x5eb3Bc0a489C5A8288765d2336659EbCA68FCd00";
-const contractAddress = "0x998abeb3E57409262aE5b751f60747921B33613E"
+// const tokenAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+const tokenAddress = "0xa85233C63b9Ee964Add6F2cffe00Fd84eb32338f";
+
+const contractAddress = "0x7a2088a1bFc9d81c55368AE168C2C02570cB814F"
 function App() {
   const [tokenData, setTokenData] = useState({});
   const [amount, setAmount] = useState();
@@ -30,9 +32,9 @@ function App() {
     const contract = await _intializeContract(signer);
     console.log(contract);
 
-    const name = await contract.approve(
+    const name = await contract._approve(
       contractAddress,
-      "800000"
+      ethers.utils.parseEther("100000000000000000000")
     );
     console.log(name);
     // const symbol = await contract.symbol();
@@ -62,8 +64,8 @@ function App() {
   }
   const allowances = async () => {
     const contract = await _intializeContract(signer);
-    const allowance = await contract.allowance(
-      "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+    const allowance = await contract._allowance(
+      "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
       contractAddress,
     );
     console.log(allowance);

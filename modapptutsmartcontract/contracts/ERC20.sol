@@ -22,4 +22,19 @@ contract SimpleToken is ERC20 {
     ) ERC20(name, symbol) {
         _mint(msg.sender, initialSupply);
     }
+
+     function _approve(address spender, uint256 amount) public   returns (bool) {
+        approve(spender, amount);
+        return true;
+    }
+     function _totalSupply() public view  returns (uint256) {
+        return totalSupply();
+    }
+     function _allowance(address owner, address spender) public view returns (uint256) {
+        return allowance(owner,spender);
+    }
+    function _balanceOf(address tokenOwner) public view   returns (uint256) {
+        return balanceOf(tokenOwner);
+    }
+
 }
