@@ -1,6 +1,6 @@
 //MDToken.sol
 //SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.7.0;
+pragma solidity ^0.8.18;
 contract Token {
     string public name = "Madfinger Token";
     string public symbol = "MHT";

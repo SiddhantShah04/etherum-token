@@ -6,7 +6,7 @@ const ARBITRUM_MAINNET_TEMPORARY_PRIVATE_KEY = "";
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.7.0",
+  solidity: "0.8.18",
   networks: {
     hardhat: {
       chainId: 31337
